@@ -15,7 +15,7 @@ script = ExtResource("1_lt8yj")
 [node name="BackgroundShaderedSprite" type="Sprite2D" parent="."]
 texture_repeat = 2
 material = SubResource("ShaderMaterial_h615w")
-position = Vector2(607, 378)
+position = Vector2(649, 386)
 scale = Vector2(4.54246, 3.95949)
 texture = ExtResource("3_04wsa")
 
