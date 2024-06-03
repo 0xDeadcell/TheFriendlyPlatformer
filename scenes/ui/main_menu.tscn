@@ -3,20 +3,21 @@
 [ext_resource type="Script" path="res://scenes/ui/main_menu.gd" id="1_lt8yj"]
 [ext_resource type="PackedScene" uid="uid://doqa6vjfcdi1a" path="res://scenes/ui/sound_button.tscn" id="2_aa8xj"]
 [ext_resource type="Shader" path="res://resources/shaders/background.gdshader" id="2_e5aoh"]
-[ext_resource type="Texture2D" uid="uid://d1saoawy2e1te" path="res://assets/images/square.png" id="3_cruga"]
+[ext_resource type="Texture2D" uid="uid://c5vdo0nypg0hm" path="res://assets/images/background_glacial_mountains.png" id="3_04wsa"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_h615w"]
 shader = ExtResource("2_e5aoh")
-shader_parameter/speed = null
+shader_parameter/speed = 0.15
 
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_lt8yj")
 
 [node name="BackgroundShaderedSprite" type="Sprite2D" parent="."]
+texture_repeat = 2
 material = SubResource("ShaderMaterial_h615w")
-position = Vector2(649, 383)
-scale = Vector2(100, 50)
-texture = ExtResource("3_cruga")
+position = Vector2(607, 378)
+scale = Vector2(4.54246, 3.95949)
+texture = ExtResource("3_04wsa")
 
 [node name="MainMenuBody" type="MarginContainer" parent="."]
 unique_name_in_owner = true
