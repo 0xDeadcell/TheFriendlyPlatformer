@@ -6,6 +6,7 @@ signal back_pressed
 @onready var window_button = %WindowButton as Button
 @onready var sfx_slider = %SFXSlider
 @onready var music_slider = $%MusicSlider
+@onready var player_name = $%PlayerNameTextEdit
 @onready var back_button = $%BackButton
 
 var previous_ui: Node
@@ -15,6 +16,7 @@ func _ready():
 	window_button.pressed.connect(on_window_button_pressed)
 	sfx_slider.value_changed.connect(on_audio_slider_changed.bind("SFX"))
 	music_slider.value_changed.connect(on_audio_slider_changed.bind("Music"))
+	#player_name.value = "0xdeadcell"
 	
 	update_display()
 
@@ -26,6 +28,7 @@ func update_display():
 
 	sfx_slider.value = get_bus_volume_percent("SFX")
 	music_slider.value = get_bus_volume_percent("Music")
+	#player_name.value = "0xdeadcell"
 
 func get_bus_volume_percent(bus_name: String):
 	var bus_index = AudioServer.get_bus_index(bus_name)
@@ -38,6 +41,7 @@ func set_bus_volume_percent(bus_name: String, percent: float):
 	var volume_db = linear_to_db(percent)
 	AudioServer.set_bus_volume_db(bus_index, volume_db)
 	GameSettings.write_back_volume_setting(bus_name, percent)
+
 
 
 func on_window_button_pressed():

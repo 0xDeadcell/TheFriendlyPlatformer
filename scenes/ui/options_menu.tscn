@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dvoysvboloo3p"]
 
 [ext_resource type="Script" path="res://scenes/ui/options_menu.gd" id="1_8l6bt"]
-[ext_resource type="Texture2D" uid="uid://d1saoawy2e1te" path="res://assets/images/square.png" id="2_cpl0d"]
+[ext_resource type="Texture2D" uid="uid://bqijtdlsdqqp3" path="res://assets/images/square.png" id="2_cpl0d"]
 [ext_resource type="PackedScene" uid="uid://doqa6vjfcdi1a" path="res://scenes/ui/sound_button.tscn" id="3_w2wc7"]
 
 [node name="OptionsMenu" type="CanvasLayer"]
@@ -44,6 +44,21 @@ text = "Options"
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_constants/separation = 16
+
+[node name="ChangePlayerNameContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/ChangePlayerNameContainer"]
+layout_mode = 2
+text = "Player Name"
+
+[node name="PlayerNameTextEdit" type="TextEdit" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/ChangePlayerNameContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Add your player name here"
+text = "0xdeadcell"
+placeholder_text = "Your Player Name"
+scroll_fit_content_height = true
 
 [node name="SFXOptionsContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -88,3 +103,5 @@ text = "Fullscreen"
 unique_name_in_owner = true
 layout_mode = 2
 text = "Back"
+
+[node name="Node" type="Node" parent="."]

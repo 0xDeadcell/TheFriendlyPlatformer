@@ -7,3 +7,4 @@ script = ExtResource("1_mloi4")
 sfx_volume = 1.0
 music_volume = 1.0
 window_mode = 0
+player_name = "0xdeadcell"

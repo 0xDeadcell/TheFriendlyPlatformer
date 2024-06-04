@@ -16,7 +16,6 @@ func load_settings_file():
 	if (ResourceLoader.exists(SETTINGS_FILE_PATH)):
 		settings = ResourceLoader.load(SETTINGS_FILE_PATH)
 
-
 func write_settings():
 	ResourceSaver.save(settings, SETTINGS_FILE_PATH)
 
@@ -45,3 +44,8 @@ func write_back_volume_setting(bus_name: String, percent: float):
 func write_back_display_settings(mode: DisplayServer.WindowMode):
 	settings.set_window_mode(mode)
 	write_settings()
+
+
+func get_player_name(player_name: String):
+	settings.player_name = player_name
+	return settings.player_name
